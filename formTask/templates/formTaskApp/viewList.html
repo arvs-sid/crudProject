@@ -1,0 +1,39 @@
+<h3> View Form List</h3>
+
+<style>
+    .button {
+      background-color:#4CAF50;
+    }
+    .button2 {background-color: #008CBA;}
+    .button3 {background-color: #f44336;}
+</style>
+<div class="main">
+ 
+    {% for list in viewListData %}
+    <footer>
+        <div class="container">
+            <div class="row well ml-t">
+                <div class="col-lg-8 col-md-8">    
+                    <h4>Name         : {{ list.name }}</h4>
+                    <h4>Age          : {{ list.age }}</h4>
+                    <h4>Phone Number : {{ list.phoneNumber }}</h4>
+                    <h4>Address      : {{ list.address }}</h4>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <form action="" method="POST">
+        {% csrf_token %}
+    <button class="button2" formaction="/update/{{list.name}}">update</button> <button class="button3" formaction="/delete/{{list.name}}">delete</button>
+    <p>
+
+    </p>
+
+    {% endfor %}
+    </form>
+    <form action="" method="POST">
+        {% csrf_token %}
+    <h1><button class="button" formaction="/">Create</button></h1>
+    </form>
+</div>
+

@@ -1,0 +1,7 @@
+<h3>Create Basic Form </h3>
+
+<form action="" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{formDetails.as_p}}
+    <input type = "submit">
+</form>

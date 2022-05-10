@@ -1,0 +1,17 @@
+<h3>Update Form</h3>
+<div class="main">
+    <form method="POST">
+        {% csrf_token %}
+        <footer>
+            <div class="container">
+                <div class="row well ml-t">
+                    <div class="col-lg-8 col-md-8">    
+                        <h2>Name  : {{ updateform.name }}</h2>
+                        <h2>Phone Number  : {{ updateform.phoneNumber }}</h2>
+                    </div>
+                </div>
+            </div>
+        </footer> 
+        <input type="submit" value="Update">
+    </form>
+</div>
