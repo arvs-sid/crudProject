@@ -17,7 +17,7 @@ def formFunc(request):
         formTemplate.save()
         return redirect("/viewList")
     context['formDetails']= formTemplate
-    return render(request,'formTaskApp/createForm.html',context)
+    return render(request,'formTaskApp/index.html',context)
 
 def viewlist(request):
     context = {}
