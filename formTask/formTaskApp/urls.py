@@ -5,6 +5,6 @@ from . import views
 urlpatterns = [
     path('',views.formFunc,name='create'),
     path('viewList',views.viewlist,name='view'),
-    path('delete/<str:listName>',views.delete,name='delete'),
-    path('update/<str:listName>',views.update,name='update'),
+    path('delete/<str:id>',views.delete,name='delete'),
+    path('update/<str:id>',views.update,name='update'),
 ]
